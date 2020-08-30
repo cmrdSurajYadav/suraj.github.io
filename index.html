@@ -1,115 +1,400 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <title>
+        Suraj Online Food 
+    </title>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+        
+        <style>
+            
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <style>
-        #navbar {
-            color: white;
-        }
+            *{
 
-        #home {
-            color: white;
-        }
+                margin:0px;
+                padding: 0px;
+            }
+           div.logo img{
 
-        #navbarDropdown {
-            color: white;
-        }
-    </style>
-
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand " href="#" id="navbar">Reminder</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" id="home">Home <span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-    <div class="container my-3">
-        <h1>Reminder Note By Suraj</h1>
-        <div class="card">
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <div class="card-body">
-                <h5 class="card-title">Create A Note</h5>
-                <div class="form-group">
-                    <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
-                    <textarea class="form-control" id="addTxt" rows="3"></textarea>
-                </div>
-                <button class="btn btn-primary" id='addBtn'>Add Note</button>
-            </div>
-        </div>
-        <hr>
-        <h2>Your Notes </h2>
-        <hr>
-        <div id="notes" class="row container-fluid ">
-
-            <div class="card my-3 mx-3" style="width: 18rem;">
+               width: 74px;
+               border-radius: 83px;;
+           }
+           #navbar{
+               display: flex;
+           }
+           ul{
                
-                <div class="card-body">
-                  <h5 class="card-title">Your Notes</h5>
-                  <textarea class="form-control"  rows="3"></textarea>
-                 
-                  <buton  class="btn btn-primary">delete Notes</buton>
-                </div>
-              </div>
+               margin-left: 15px;
+               text-align: center;
+               justify-content: center;
+               display: flex;
+               list-style: none;
+              
+           }
+
+           ul li{
+               
+
+               padding:23px;
+           }
+           ul li a{
+            text-decoration: none;
+            display: block;
+            color:white;
+            font-size:1.3rem;
+           }
+           ul li a:hover{
+               color: black;
+               background-color: white;
+               border-radius: 23px;
+           }
+
+           #flot{
+               padding-left:700px;
+               text-align: center;
+               padding-top:20px;
+               
+               
+           }
+           #flot a{
+
+               background-color: transparent;
+               border:none;
+               color:white;
+               padding-left: 23px;
+               font-size:1.3rem;
+            
+            
+
+           }
+           #flot button:hover{
+
+            background-color: beige;
+               color:red;
+
+              border-radius: 23px;
+              outline:none;
 
 
+           }
+           #flot a:hover{
+               color:red;
+           }
+
+           #navbar::before{
+               content: "";
+
+               background-color:black;
+               position: absolute;
+               height: 100%;
+               width:100%;
+               z-index: -1;
+               opacity: 0.7;
+           }
+           
+           #navbar{
+               position: relative;
+           }
+           #first{
+               display:flex;
+               
+               flex-direction: column;
+               padding:30px 200px;
+               align-items: center;
+               justify-content: center;
+               color:white;
+               font-size:large;
+               margin-bottom: 255px;
+
+           }
+           #first::before{
+            content: "";
+
+background:url("food4.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+position: absolute;
+height: 100%;
+width:100%;
+z-index: -1;
+opacity: 0.89;
+
+
+           }
+           h1 {
+               margin-top: 106px;
+               color:white;
+               font-size:2.7rem;
+               padding-bottom: 20px
+               
+           }
+
+           p{
+               margin-bottom: 20px;
+           }
+           
+
+           #btn{
+            color:white;
+               background-color: crimson;
+               border:1px solid whitesmoke;
+
+               width:100px;
+               height:25px;
+               border-radius: 20px;
+               cursor: pointer;
+               outline:none;
+
+           }
+           #btn:hover{
+               background-color: beige;
+               color:red;
+               outline:none;
+
+              
+           }
+          
+         .our{
+             text-align: center;
+             color:black;
+             margin-top:100px;
+         }
+           #or{
+
+              
+              
+
+               display:flex;
+               text-align: center;
+              
+           }
+           #or div{
+
+               padding:39px;
+               
+           }
+           #or::before{
+
+            content: "";
+
+background:url("bk9.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+position: absolute;
+height: 54%;
+width:100%;
+z-index: -1;
+opacity: 0.89;
+
+
+           }
+
+
+           
+           #or img{
+               height:170px;
+               width:290px;
+               border-radius: 23px;
+               
+           }
+
+           #or a{
+               text-decoration:none;
+               
+
+               font-size:1.7rem;
+               
+
+           }
+           #or a p{
+               border:1px groove black;
+               border-top:none;
+               
+               color:black;
+               background-color:beige;
+               border-radius: 23px;
+           }
+
+           #or a p:hover{
+
+               color:red;
+               background-color: beige;
+           }
+          
+
+            #h{
+            text-align: center;
+             color:black;
+
+
+           }
+
+           .clints  {
+
+               display: flex;
+               justify-content: center;
+               
+           }
+           .clints div{
+
+               padding:34px;
+           }
+           
+
+
+           
+           .clints img {
+
+               width: auto;
+               height: 170px;
+               
+           }
+
+          
+          
+
+           .clints::before{
+               content: "";
+
+               background:url("bk6.jpg");
+               background-repeat: no-repeat;
+               background-size: cover;
+               position: absolute;
+               height: 30%;
+               width:100%;
+               z-index: -1;
+               opacity: 0.89;
+           }
+           #head1{
+               color:black;
+               text-align: center;
+           }
+
+           .foot{
+               padding-left:834px;
+               text-align: left;
+              
+               background-image: url("contact.jpg");
+               background-repeat: no-repeat;
+               background-size: cover;
+               
+               opacity: 0.89;
+           }
+           .foot h2{
+               text-decoration-line: underline;
+               color:red;
+           }
+           .foot p{
+               font-size: 1.3rem;
+               color:blue;
+               
+               justify-content: center;
+               text-justify: auto;
+               
+           }
+           
+
+
+           
+           </style>
+    </head>
+    <body>
+        <nav id="navbar">
+            <div class="logo">
+                <image src='fb.jpg'>
+
+                   
+
+               
+            </div>
+            <ul>
+                <li><a href="#"> Home</a></li>
+                <li><a href="#"> Servies</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <div id="flot">
+                <a herf="#">Log In</a>
+                <a herf="#">| |</a>
+                
+                <a herf="#">Sign Up</a>
+           
+                
+    
+        </div>
+        </nav>
+        
+        <section id="first">
+            <h1 id="on"><p>Suraj Onlinemeal.com   </p></h1>
+            
+            <p>People who love to eat are always the best people.</p>
+            <button id="btn">Order Now</button>
+            
+        </section>
+        <h1 class="our">Our Services <img src="https://webscte.co.in/assets/image/new.gif"></h1>
+        <div id="or">
+            <div>
+                <img src="deli.jpg">
+                 <a href="#"><p>Order Your Favorite Food </p></a>
+            </div>
+            <div>
+                <img src="meal2.jpg">
+                <a href="#"><p>Get Outside For Meal  </p></a>
+            </div>
+
+            <div>
+                <img src="food.jpg">
+                <a href="#"><p>Clubs And Night Partys</p></a>
+            </div>
+            <div>
+                <img src="hotel.jpg">
+                <a href="#"><p>Book  A Hotel Online</p></a>
+            </div>
+            
 
         </div>
 
+        <h1 id="head1">Our clints</h1>
+        <section class="clints">
+             <div>
+                <img src="micro.png">
+    
+    
+            </div>
+
+            
+        <div>
+            <img src="apl.png">
 
 
+        </div>
+        <div>
+            <img src="h.png">
+        </div>
+
+        <div>
+            <img src="l.png">
 
 
+        </div>
+        </section>
+       <div class ="foot">
 
+        <h2>Contact Us:-
+            <img id="new" src="https://webscte.co.in/assets/image/new.gif">
+           
 
-
-
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-            crossorigin="anonymous"></script>
-
-</body>
-<script src="proj.js"></script>
-
-
+        </h2>
+        <p>Mail:- surajyadav.maa@gmail.com   <img src="https://webscte.co.in/assets/image/new.gif"></p>
+        <p>Ph Number:- +917908761507/+919547995393   <img src="https://webscte.co.in/assets/image/new.gif"></p>
+        <p>country:- India</p>
+        
+       </div>
+       
+        
+        
+       
+           
+        
+    </body>
 </html>
